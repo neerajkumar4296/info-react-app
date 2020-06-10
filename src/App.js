@@ -21,11 +21,12 @@ class App extends Component{
  fetchCasesSummary =  event => {
     //alert('fetching report for country:: ' +this.state.country);
 
-    const apiurl='http://127.0.0.1:8090/utilities/coronaCases/summary/';
+    //const localApiurl='http://127.0.0.1:8090/utilities/coronaCases/summary/';
+    const devApiUrl='http://rest-info-service-dev1.ap-south-1.elasticbeanstalk.com/utilities/coronaCases/summary/';
 
     event.preventDefault()
 
-      axios.get(apiurl +this.state.country)
+      axios.get(devApiUrl +this.state.country)
       .then((response) =>
      { 
        console.log(response)
@@ -47,7 +48,7 @@ class App extends Component{
   return (
     <div className="App">
       <header className="App-header">
-      <h1>Corona Virus Cases Summary</h1>
+      <h2>Corona Virus Cases Summary</h2>
       <form onSubmit={this.fetchCasesSummary}>
                       <label>
                         country: <input type="text" placeholder="eg: India" value={this.state.country}
@@ -55,8 +56,9 @@ class App extends Component{
                       </label>
                     <input type="submit" value="Submit" />
                     </form>
+                   
           <div  className="col">
-            <h2>Corona Virus Cases summary: {this.state.responseData.countryName}</h2>
+            <h3>Corona Virus Cases summary: {this.state.responseData.countryName}</h3>
             <p><b>total confirmed cases: {this.state.responseData.confirmed}</b></p>
             <p><b>newly confirmed cases: {this.state.responseData.newlyConfirmed}</b></p>
             <p><b>total deaths: {this.state.responseData.deaths}</b></p>
@@ -67,6 +69,8 @@ class App extends Component{
           </div>       
      
       </header>
+
+       
       </div>
   );
  }
