@@ -19,13 +19,43 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  text-align: center;
+  justify-content: top;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+#casesSummary {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  padding-bottom: 4px;
+  width: 40%;
+  
+}
+
+ #casesSummary th   {
+  border: 1px solid #ddd;
+  padding: 2px;
+}
+
+#casesSummary tr:nth-child(even){background-color: #f2f2f2;}
+
+#casesSummary tr 
+{
+  background-color: #f2f2f2;
+  color: #282c34;
+}
+
+#casesSummary th {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  text-align: center;
+  background-color: #282c34;
+  color: white;
 }
 
 @keyframes App-logo-spin {
