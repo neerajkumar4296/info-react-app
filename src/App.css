@@ -13,50 +13,64 @@
   }
 }
 
-.App-header {
+
+
+.Main{
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 150vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  justify-content: top;
+  justify-content: unset;
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 
 .App-link {
   color: #61dafb;
 }
 
-#casesSummary {
+ .countryCasesSummary{
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  padding-bottom: 4px;
-  width: 40%;
-  
-}
-
- #casesSummary th   {
-  border: 1px solid #ddd;
-  padding: 2px;
-}
-
-#casesSummary tr:nth-child(even){background-color: #f2f2f2;}
-
-#casesSummary tr 
-{
-  background-color: #f2f2f2;
-  color: #282c34;
-}
-
-#casesSummary th {
-  padding-top: 4px;
-  padding-bottom: 4px;
+  margin-top: 30px;
   text-align: center;
-  background-color: #282c34;
-  color: white;
-}
+  width: 75%;
+ }
+ 
+ .countryCasesSummary th, .globalAndCountrySummaries th {
+   padding: 10px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   color: black;
+   background-color: lightpink;
+   border-bottom: 2px solid #ddd;
+  }
+  
+ 
+   .countryCasesSummary td, .globalAndCountrySummaries td  {
+    padding:2px;
+    color:#282c34;
+    border-bottom: 1px solid #ddd;
+    font-size: 20px;
+    font-weight: bold;
+    }
+
+   .countryCasesSummary tr, .globalAndCountrySummaries tr  {
+   background-color: white;
+   color: #282c34
+  }
+
+
+
+  .globalAndCountrySummaries{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 80%;
+    align-items: center;
+    margin: 0 auto;
+  }
 
 @keyframes App-logo-spin {
   from {
@@ -66,3 +80,4 @@
     transform: rotate(360deg);
   }
 }
+
